@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | Triance株式会社</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <ul class="nav-menu">
+            <li><a href="index.html#business">事業内容</a></li>
+            <li><a href="index.html#about">会社情報</a></li>
+            <li><a href="contact.html">問い合わせ</a></li>
+        </ul>
+        <div class="logo-area">
+            <a href="index.html" class="logo-link">
+                <img src="Trianceロゴ_背景透過.png" alt="Triance株式会社" class="logo-img">
+            </a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="contact-form-section">
+            <div class="section-header">
+                <h2>お問い合わせ</h2>
+                <p>contact</p>
+            </div>
+
+            <div class="form-container">
+                <p class="form-intro">
+                    事業に関するご相談、お見積りのご依頼など、お気軽にお問い合わせください。<br>
+                    以下のフォームに必要事項をご記入の上、「送信内容を確認する」ボタンを押してください。
+                </p>
+
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="company">貴社名</label>
+                        <input type="text" id="company" name="company" placeholder="例：株式会社トライアンス">
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" name="name" placeholder="例：嶋田 稔喜" required>
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="email">メールアドレス</label>
+                        <input type="email" id="email" name="email" placeholder="例:example@triance.co.jp" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel">電話番号</label>
+                        <input type="tel" id="tel" name="tel" placeholder="例:03-6265-4798">
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="category">お問い合わせ項目</label>
+                        <select id="category" name="category" required>
+                            <option value="" disabled selected>選択してください</option>
+                            <option value="business">不動産売買・開発について</option>
+                            <option value="consulting">コンサルティングについて</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="message">お問い合わせ内容</label>
+                        <textarea id="message" name="message" rows="8" placeholder="具体的な内容をご記入ください" required></textarea>
+                    </div>
+
+                    <div class="form-submit">
+                        <button type="submit" class="contact-btn">送信内容を確認する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

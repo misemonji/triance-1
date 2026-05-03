@@ -1,0 +1,298 @@
+/* 基本設定 */
+:root {
+    --light-green: #5ccb6f; /* 上部の明るい緑 */
+    --teal: #318a97;        /* 下部のブルーグリーン */
+    --text-white: #ffffff;
+    --text-black: #1a1a1a;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: var(--text-white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ヒーローセクション（上部の緑の部分） */
+.hero {
+    background-color: var(--light-green);
+    color: var(--text-black);
+    padding: 20px 40px 100px;
+    text-align: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    margin: 0 0 80px 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;       /* 縦方向の中央に配置します */
+    justify-content: center;   /* 横方向の中央に配置します */
+    padding: 80px 0;           /* ★上下に80pxの空間（余白）を作って縦に広くします */
+    margin-bottom: 40px;       /* 下のコンテンツとの距離 */
+}
+
+/* （参考：すでに追記していただいた画像サイズの指定はそのまま残しておいてください） */
+.logo-img {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* スマホ表示の時のロゴサイズ調整 */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 250px;
+    }
+}
+
+/* メインコンテンツ（下部のブルーグリーンの部分） */
+.main-content {
+    background-color: var(--teal);
+    padding: 60px 10%;
+}
+
+/* セクション見出しの共通スタイル */
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0;
+    letter-spacing: 4px;
+}
+
+.section-header p {
+    font-size: 24px;
+    margin: 5px 0 0 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    width: 300px;
+}
+
+/* 行動指針セクション */
+.business-section {
+    margin-bottom: 80px;
+}
+
+.catchphrase-area {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.catchphrase {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+.sub-catchphrase {
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* 会社情報セクション */
+.about-section {
+    margin-bottom: 60px;
+}
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.map-area {
+    flex: 1;
+    background-color: #eee;
+    min-height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-area iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+}
+
+.info-area {
+    flex: 1.2;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table th {
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 15px 20px 15px 0;
+    vertical-align: top;
+    width: 120px;
+    white-space: nowrap;
+}
+
+.info-table td {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0;
+    line-height: 1.6;
+}
+
+.info-table td.normal-weight {
+    font-weight: normal;
+}
+
+/* お問い合わせボタン */
+.contact-btn-area {
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: var(--text-white);
+    color: var(--teal);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px 60px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* レスポンシブ対応（スマホ表示用） */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .catchphrase {
+        font-size: 32px;
+    }
+    .nav-menu {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* --- お問い合わせページ用の追加スタイル --- */
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-intro {
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* 必須項目のラベルに「必須」マークをつける */
+.form-group.required label::after {
+    content: "必須";
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--light-green);
+    box-shadow: 0 0 0 3px rgba(92, 203, 111, 0.2);
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form-submit .contact-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* スマホ表示の調整 */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+}
